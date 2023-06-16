@@ -25,14 +25,7 @@ export default class TaskList extends Component {
     const taskList = filterTasks(byId, allIds, filter).map((id) => {
       const { description, timer, isCompleted, created } = byId[id]
       return (
-        <Task
-          {...byId[id]}
-          onDelite={onDelite}
-          toggleFlagById={toggleFlagById}
-          inputHandler={inputHandler}
-          editSubmit={editSubmit}
-          key={id}
-        >
+        <Task {...byId[id]} onDelite={onDelite} toggleFlagById={toggleFlagById} inputHandler={inputHandler} editSubmit={editSubmit} key={id}>
           <span className="title">{description}</span>
           <Timer id={id} timer={timer} timerUpdate={timerUpdate} completed={isCompleted} />
           <span className="description">created {formatDistanceToNow(created)}</span>
@@ -51,9 +44,7 @@ TaskList.defaultProps = {
 TaskList.propTypes = {
   todos: PropTypes.objectOf(
     PropTypes.oneOfType([
-      PropTypes.objectOf(
-        PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.bool, PropTypes.array]))
-      ),
+      PropTypes.objectOf(PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.bool, PropTypes.array]))),
       PropTypes.arrayOf(PropTypes.number),
     ])
   ).isRequired,

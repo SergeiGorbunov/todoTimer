@@ -63,20 +63,9 @@ export default class Task extends Component {
     return (
       <li className={taskClass}>
         <div className="view">
-          <input
-            className="toggle"
-            type="checkbox"
-            checked={isCompleted}
-            onChange={() => toggleFlagById(id, 'isCompleted')}
-            id={htmlLabel}
-          />
+          <input className="toggle" type="checkbox" checked={isCompleted} onChange={() => toggleFlagById(id, 'isCompleted')} id={htmlLabel} />
           <label htmlFor={htmlLabel}>{children}</label>
-          <button
-            className="icon icon-edit"
-            onClick={() => toggleFlagById(id, 'isEditing')}
-            type="button"
-            aria-label="edit"
-          />
+          <button className="icon icon-edit" onClick={() => toggleFlagById(id, 'isEditing')} type="button" aria-label="edit" />
           <button className="icon icon-destroy" onClick={() => onDelite(id)} type="button" aria-label="delite" />
         </div>
         {taskInput}

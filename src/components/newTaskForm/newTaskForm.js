@@ -57,18 +57,8 @@ export default class NewTaskForm extends Component {
           onChange={(e) => this.inputHandler(e.target.value)}
           ref={this.inputRef}
         />
-        <input
-          className="new-todo-form__timer"
-          placeholder="Min"
-          value={min}
-          onChange={(e) => this.timeInputHandler('min', e.target.value)}
-        />
-        <input
-          className="new-todo-form__timer"
-          placeholder="Sec"
-          value={sec}
-          onChange={(e) => this.timeInputHandler('sec', e.target.value)}
-        />
+        <input className="new-todo-form__timer" placeholder="Min" value={min} onChange={(e) => this.timeInputHandler('min', e.target.value)} />
+        <input className="new-todo-form__timer" placeholder="Sec" value={sec} onChange={(e) => this.timeInputHandler('sec', e.target.value)} />
         <input className="hidden" type="submit" />
       </form>
     )

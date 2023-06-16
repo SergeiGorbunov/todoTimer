@@ -64,18 +64,8 @@ export default class Timer extends Component {
 
     return (
       <span className="description">
-        <button
-          className="icon icon-play"
-          type="button"
-          aria-label="play-timer"
-          onClick={() => this.toggleTimer(true)}
-        />
-        <button
-          className="icon icon-pause"
-          type="button"
-          aria-label="pause-timer"
-          onClick={() => this.toggleTimer(false)}
-        />
+        <button className="icon icon-play" type="button" aria-label="play-timer" onClick={() => this.toggleTimer(true)} />
+        <button className="icon icon-pause" type="button" aria-label="pause-timer" onClick={() => this.toggleTimer(false)} />
         {`  ${min}:${sec} `}
       </span>
     )

@@ -9,20 +9,12 @@ export default function TaskFilter({ filter, onFilterSelect }) {
         </button>
       </li>
       <li>
-        <button
-          type="button"
-          className={filter === 'active' ? 'selected' : ''}
-          onClick={() => onFilterSelect('active')}
-        >
+        <button type="button" className={filter === 'active' ? 'selected' : ''} onClick={() => onFilterSelect('active')}>
           Active
         </button>
       </li>
       <li>
-        <button
-          type="button"
-          className={filter === 'completed' ? 'selected' : ''}
-          onClick={() => onFilterSelect('completed')}
-        >
+        <button type="button" className={filter === 'completed' ? 'selected' : ''} onClick={() => onFilterSelect('completed')}>
           Completed
         </button>
       </li>
